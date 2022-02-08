@@ -174,24 +174,308 @@
 # T = [[i*j for j in range(1,11)] for i in range(1,11)]
 #
 # bool
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
+# def print_2_add_2():
+#     sum = 2 + 2
+#     print(sum)
+#
+# print_2_add_2()
+#
+# def hello_world():
+#     print("Hello World")
+#
+# hello_world()
+#
+# def pow_func(base):
+#     print(base**2)
+#
+# pow_func(2)
+# pow_func(3)
+# pow_func()
+#
+# def pow_func(base, n=2):
+#    print(base ** n)
+#
+# pow_func(3)
+# pow_func(5, 3)
+#
+# def devide_func(a,n):
+#     if a% n == 0:
+#         print(f"{a} is devided by {n}")
+#     else:
+#         print(f"{a} is not devided by {n}")
+#
+# devide_func(10,5)
+# devide_func(10,6)
+#
+# def reverse_stair(n):
+#    for i in range(n, 0, -1):
+#        print("*" * i)
+#
+# reverse_stair(5)
+#
+# def pow_func(base, n=2):
+#    print(base ** n)
+#    return None
+#
+# print(pow_func(3))
+#
+# def pow_func(base, n=2):
+#     inside_result = base ** n
+#     return inside_result
+#
+# print(pow_func(3))
+#
+# outside_result = pow_func(3)
+# print(outside_result)
+#
+# def get_multipliers(a):
+#    count = 0
+#    for n in range(1, a + 1):
+#        if a % n == 0:
+#            count += 1
+#
+#    return count
+#
+# print(get_multipliers(5))
+# print(get_multipliers(4))
+#
+# def check_palindrome(str_):
+#    str_ = str_.lower()
+#    str_ = str_.replace(" ", "")
+#
+#    if str_ == str_[::-1]:
+#        return True
+#    else:
+#        return False
+#
+# print(check_palindrome("test"))  # False
+# check_palindrome("Кит на море не романтик")  # True
+#
+# def local():
+#    x = 5  # локальная переменная
+#    print(x)
+#
+# x = 10
+# local()
+# print(x)
+#
+# def local():
+#   print(x)  # так как x нет в локальной области видимости, мы берем её из глобальной области
+#
+# x = 10
+# local()
+# print(x)
+#
+# x = 3
+#
+#
+# def func():
+#    global x # объявляем, что переменная является глобальной
+#    print(x)
+#    x = 5
+#    x += 5
+#    return x
+#
+#
+# func()
+# print(x)
+#
+# def get_my_func():
+#    def hello_world():
+#        print("Hello")
+#    return hello_world
+#
+# hello_world_func = get_my_func()  # получить функцию в качестве результата
+#
+# print(type(hello_world_func))  # <class 'function'>
+# hello_world_func()  # Hello
+#
+# def get_mul_func(m):
+#     nonlocal_m = m
+#     def local_mul(n):
+#         return n * nonlocal_m
+#
+#     return local_mul
+#
+# two_mul = get_mul_func(2)
+# two_mul(5)
+#
+# def func(a, b, c):
+#     print('a =', a)
+#     print('b =', b)
+#     print('c =', c)
+#
+# func(1,2,3)
+# func(3, 2, 1)
+# func(a=1, b=2, c=3)
+# func(c=3, b=2, a=1)
+# func(a, b, c=3)
+#
+# a = [1,2,3]
+# b = [a,4,5,6]
+# print(b)
+#
+# a = [1,2,3]
+# b = [*a,4,5,6]
+# print(b)
+#
+# def my_func(*args, **kwargs):
+#    print(type(args))
+#    print(type(kwargs))
+#
+# my_func()
+#
+# def adder(*nums):
+#     sum_ = 0
+#     for n in nums:
+#         sum_ += n
+#
+#     return sum_
+#
+# print(adder())
+# print(adder(1))
+# print(adder(1,2))
+# print(adder(1,2,3))
+#
+# def multiplier(*nums):
+#     mlt = 1
+#     for n in nums:
+#         mlt *= n
+#
+#     return mlt
+#
+# print(multiplier())
+# print(multiplier(1))
+# print(multiplier(1,2))
+# print(multiplier(1,2,3))
+#
+# def incorrecr_func(name_arg=[]):
+#     print(name_arg)
+#     name_arg.append(1)
+#     print(name_arg)
+#
+# incorrecr_func()
+# incorrecr_func()
+#
+# def correct_func(name_arg=None):
+#     if name_arg is None:
+#         name_arg = []
+#     print(name_arg)
+#     name_arg.append(1)
+#     print(name_arg)
+#
+# correct_func()
+# correct_func()
+# correct_func([123])
+# correct_func(name_arg=[123])
+#
+# def rec_fibb(n):
+#    if n == 1:
+#        return 1
+#    if n == 2:
+#       return 1
+#    return rec_fibb(n - 1) + rec_fibb(n - 2)
+#
+# rec_fibb(10)
+#
+# def rec_sum(n):
+#     if n == 1:
+#         return 1
+#     return n + rec_sum(n - 1)
+#
+# rec_sum(5)
+#
+# def reverse_str(string):
+#     if len(string) == 0:
+#         return ''
+#     else:
+#         return string[-1] + reverse_str(string[:-1])
+#
+# reverse_str('test')
+#
+# def sum_digit(n):
+#    if n < 10:
+#        return n
+#    else:
+#        return n % 10 + sum_digit(n // 10)
+#
+# sum_digit(123)
+#
+# def fib():
+#     a, b = 0, 1
+#     yield a
+#     yield b
+#
+#     while True:
+#         a, b = b, a + b
+#         yield b
+#
+# for num in fib():
+#     print(num)
+#
+# def count(start=1,step=1):
+#     counter = start
+#     while True:
+#         yield counter
+#         counter += step
+#
+# def repeat_list(list_):
+#     list_values = list_.copy()
+#     while True:
+#         value = list_values.pop(0)
+#         list_values.append(value)
+#         yield value
+#
+# for i in repeat_list([1,2,3,4,5]):
+#     print(i)
+#
+# def twice_func(inside_func):
+#     inside_func()
+#     inside_func()
+#
+# def hello():
+#     print("Hello")
+#
+# test = twice_func(hello)
+#
+# def make_adder(x):
+#     def adder(n):
+#         return x + n
+#     return adder
+#
+# add_5 = make_adder(5)
+# print(add_5(10))
+# print(add_5(100))
+#
+# def linear_solve(a,b):
+#     if a:
+#         return b/a
+#     else:
+#         return "Net kornei"
+#
+# print(linear_solve(0,9))
+#
+# a = ["asd", "bbd", "ddfa", "mcsa"]
+# print(list(map(len, a)))
+# print(list(map()))
+#
+# myFile = open('myFile.txt', 'rt', encoding="utf8")
+# print(myFile.read())
+# print(myFile.read(20))
+# print(myFile.readline())
+# print(myFile.readlines())
+#
+# for line in myFile:
+#     print(line)
+#
+# myFile = open('newfile.txt', 'w')
+# myFile.write('ttttt')
+# print('zzzzz', file=myFile)
+#
+# with open("newfile.txt") as myFile:
+#     for line in myFile:
+#         print(line)
 
 
 
